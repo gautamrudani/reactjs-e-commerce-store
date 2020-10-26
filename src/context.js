@@ -48,7 +48,6 @@ class ProductProvider extends Component {
     product.count = 1;
     const price = product.price;
     product.total = price;
-
     this.setState(() => {
       return { product: tempProduct, cart: [...this.state.cart, product] };
     },
@@ -93,7 +92,6 @@ class ProductProvider extends Component {
     else {
       product.total = product.count * product.price;
       this.setState(() => { return { cart: [...tempCart] } }, () => { this.addTotals() });
-
     }
 
   }
@@ -161,5 +159,5 @@ class ProductProvider extends Component {
 
 const ProductConsumer = ProductContext.Consumer;
 
-export { ProductConsumer, ProductProvider };
-// export { ProductConsumer, ProductProvider, ProductContext };
+// export { ProductConsumer, ProductProvider };
+export { ProductConsumer, ProductProvider, ProductContext };
